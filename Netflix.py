@@ -5,6 +5,10 @@
 # Copyright (C) 2012
 # ---------------------------
 
+import math
+import sys
+sys.path.append('./caches')
+from Average import average_cache
 
 # ------------
 # netflix_read
@@ -53,27 +57,53 @@ def netflix_read (r, a, have_buffer) :
 # netflix_eval
 # ------------
 
-def netflix_eval (i, j) :
+def netflix_eval (movie, user) :
     """
-    i is the beginning of the range, inclusive
-    j is the end       of the range, inclusive
+    
     return the max cycle length in the range [i, j]
     """
+
+    #the result of some calculation.
+    #a lot of calculatios    
+
+
+    return average_cache
+
+
+# -------------
+# netflix_rmse
+# -------------
+def netflix_rmse(actual, predictions) :
+    """
+    NOTE: actual needs to be build beforehand
+
+    """
+    mean = 0.0    
+
+    for i in range( len(predictions)) :
+    
+        mean += (actual[i] - predictions[i])**2
+            
+    mean /= len(predictions)
+
+    return math.sqrt(mean)    
 
 # -------------
 # netflix_print
 # -------------
 
-def netflix_print (w, i, j, v) :
+def netflix_print (w, movie, ratings) :
     """
     prints the values of i, j, and v
     w is a writer
-    i is the beginning of the range, inclusive
-    j is the end       of the range, inclusive
-    v is the max cycle length
-    
-    w.write(str(i) + " " + str(j) + " " + str(v) + "\n")
-"""
+    movie is a integer that represents a movie id    
+    ratings is a list of ratings
+    """
+
+    w.write(str(movie) + ":\n") 
+    for rating in ratings :
+        w.write(str(rating)+"\n")
+
 # -------------
 # netflix_solve
 # -------------
@@ -91,9 +121,16 @@ def netflix_solve (r, w) :
     while True : #return False when we reach eof
         a = [0, []]
         end_reached = netflix_read(r, a, next_movie)
-#        v = netflix_eval(a[0], a[1])
-
-#       netflix_print(w, a[0], a[1], v)
+        movie = a[0]
+        users_list = a[1]        
+        ratings = []       
+  
+        #for user in users_list :
+           # ratings += netflix_eval(movie,user)
+   
+        #netflix_print(w, movie, ratings)
+        
         if end_reached :
-          break
-    
+            break
+    #netflix_rmse(actual, predictions)
+    #print

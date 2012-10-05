@@ -18,8 +18,8 @@ To test the program:
 
 import StringIO
 import unittest
-
-from Netflix import netflix_read, netflix_eval, netflix_print, netflix_solve
+import math
+from Netflix import netflix_read, netflix_eval, netflix_print, netflix_solve, netflix_rmse
 
 # -----------
 # TestNetflix
@@ -100,8 +100,45 @@ class TestNetflix (unittest.TestCase) :
     def test_solve_3 (self) :
         r = StringIO.StringIO("3:\n1\n2\n4:\n")
         w = StringIO.StringIO()
-        netflix_solve(r, w)       
-     
+        netflix_solve(r, w)   
+
+    # -----
+    # print
+    # -----
+
+    def test_print_1 (self) :
+        w = StringIO.StringIO()
+        netflix_print(w, 1 , [1.0,2.0,3.0])
+        self.assert_(w.getvalue() == "1:\n1.0\n2.0\n3.0\n")
+
+    def test_print_2 (self) :
+        w = StringIO.StringIO()
+        netflix_print(w, 3, [])
+        self.assert_(w.getvalue() == "3:\n")
+
+    def test_print_3 (self) :
+        w = StringIO.StringIO()
+        netflix_print(w, 5, [3.4,4.3,5.0,1.0])
+        self.assert_(w.getvalue() == "5:\n3.4\n4.3\n5.0\n1.0\n")    
+    
+    # ----
+    # eval
+    # ----
+
+    def test_eval_1 (self) :
+
+        movie_id = 1
+        user_id = 2
+        v = netflix_eval(movie_id, user_id)
+        self.assert_(v >= 1.0 and v <= 5.0)
+
+    def test_rmse_1(self) :
+ 
+        actual = [5,5]
+        predictions = [4,3]
+        v = netflix_rmse(actual, predictions)
+        self.assert_(v == math.sqrt(2.5))
+
     """
     def test_read_3 (self) :
         r = StringIO.StringIO("10 10\n")
@@ -148,29 +185,6 @@ class TestNetflix (unittest.TestCase) :
     def test_eval_7 (self) :
         v = netflix_eval(3, 3)
         self.assert_(v == 8)
-    # -----
-    # print
-    # -----
-
-    def test_print_1 (self) :
-        w = StringIO.StringIO()
-        netflix_print(w, 1, 10, 20)
-        self.assert_(w.getvalue() == "1 10 20\n")
-
-    def test_print_1 (self) :
-        w = StringIO.StringIO()
-        netflix_print(w, 1, 10, 20)
-        self.assert_(w.getvalue() == "1 10 20\n")
-
-    def test_print_1 (self) :
-        w = StringIO.StringIO()
-        netflix_print(w, 1, 10, 20)
-        self.assert_(w.getvalue() == "1 10 20\n")
-
-    def test_print_1 (self) :
-        w = StringIO.StringIO()
-        netflix_print(w, 1, 10, 20)
-        self.assert_(w.getvalue() == "1 10 20\n")
 
     # -----
     # solve
