@@ -24,12 +24,9 @@ def netflix_read (r, a, have_buffer) :
     movie = 0
 
     if have_buffer == [0] :    
-
         s = r.readline()
         if s == "" :
             return False
-    
-    
         if s[-2] == ":": # checks if the last element == ":"
             movie  = int(s.split(":")[0]) #try to print
     else:
@@ -115,7 +112,7 @@ def netflix_solve (r, w) :
     w is a writer
     """
 
-
+    print "RMSE"
     
     next_movie = [0]
     while True : #return False when we reach eof
@@ -123,14 +120,14 @@ def netflix_solve (r, w) :
         end_reached = netflix_read(r, a, next_movie)
         movie = a[0]
         users_list = a[1]        
-        ratings = []       
-  
-        #for user in users_list :
-           # ratings += netflix_eval(movie,user)
-   
-        #netflix_print(w, movie, ratings)
+        ratings = [0.0]*len(users_list)       
+        c = 0
+        for user in users_list :
+            ratings[c] += netflix_eval(movie,user)
+            c+=1
+        netflix_print(w, movie, ratings)
         
-        if end_reached :
+        if not end_reached :
             break
     #netflix_rmse(actual, predictions)
     #print
