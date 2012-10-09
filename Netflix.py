@@ -9,6 +9,10 @@ import math
 import sys
 sys.path.append('./caches')
 from Average import average_cache
+from avgUsers import avg_user
+
+
+
 
 # ------------
 # netflix_read
@@ -64,7 +68,7 @@ def netflix_eval (movie, user) :
     #a lot of calculatios    
 
 
-    return average_cache
+    return avg_user[user-1]
 
 
 # -------------
