@@ -40,6 +40,7 @@ def netflix_read (r, a, have_buffer) :
     assert type(movie) is int
 
     a [0] = movie
+    a[1] = []
     users_a = a[1]
 
 
@@ -51,7 +52,7 @@ def netflix_read (r, a, have_buffer) :
         if s [-2] == ":":
             have_buffer[0] = s.split(":")[0]
             return True
-        users_a.append(int(s[0]))
+        users_a.append(int(s))
 
     
 # ------------
