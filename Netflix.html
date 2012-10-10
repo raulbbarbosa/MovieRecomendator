@@ -1,0 +1,57 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module Netflix</title>
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>Netflix</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:/v/filer4b/v20q001/rulises/Desktop/cs373-netflix/Netflix.py">/v/filer4b/v20q001/rulises/Desktop/cs373-netflix/Netflix.py</a></font></td></tr></table>
+    <p><tt>#&nbsp;---------------------------<br>
+#&nbsp;projects/netflix/Collatz.py<br>
+#&nbsp;Copyright&nbsp;(C)&nbsp;2012<br>
+#&nbsp;---------------------------</tt></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="math.html">math</a><br>
+</td><td width="25%" valign=top><a href="sys.html">sys</a><br>
+</td><td width="25%" valign=top></td><td width="25%" valign=top></td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#eeaa77">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Functions</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#eeaa77"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt><a name="-netflix_eval"><strong>netflix_eval</strong></a>(movie, user, users_avg)</dt><dd><tt>computes&nbsp;a&nbsp;prediction&nbsp;given&nbsp;a&nbsp;movie&nbsp;and&nbsp;a&nbsp;specific&nbsp;user<br>
+movie&nbsp;is&nbsp;a&nbsp;movie&nbsp;id<br>
+user&nbsp;is&nbsp;a&nbsp;user&nbsp;id<br>
+users_avg&nbsp;is&nbsp;the&nbsp;average&nbsp;of&nbsp;all&nbsp;users&nbsp;average&nbsp;that&nbsp;are&nbsp;different&nbsp;from&nbsp;0.0<br>
+return&nbsp;a&nbsp;prediction&nbsp;between&nbsp;1&nbsp;and&nbsp;5</tt></dd></dl>
+ <dl><dt><a name="-netflix_print"><strong>netflix_print</strong></a>(w, movie, ratings)</dt><dd><tt>prints&nbsp;the&nbsp;values&nbsp;of&nbsp;i,&nbsp;j,&nbsp;and&nbsp;v<br>
+w&nbsp;is&nbsp;a&nbsp;writer<br>
+movie&nbsp;is&nbsp;a&nbsp;integer&nbsp;that&nbsp;represents&nbsp;a&nbsp;movie&nbsp;id&nbsp;&nbsp;&nbsp;&nbsp;<br>
+ratings&nbsp;is&nbsp;a&nbsp;list&nbsp;of&nbsp;ratings</tt></dd></dl>
+ <dl><dt><a name="-netflix_read"><strong>netflix_read</strong></a>(r, a, have_buffer)</dt><dd><tt>reads&nbsp;two&nbsp;ints&nbsp;into&nbsp;a[0]&nbsp;and&nbsp;a[1]<br>
+r&nbsp;is&nbsp;a&nbsp;&nbsp;reader<br>
+a&nbsp;is&nbsp;an&nbsp;array&nbsp;of&nbsp;int<br>
+return&nbsp;true&nbsp;if&nbsp;that&nbsp;succeeds&nbsp;and&nbsp;it&nbsp;has&nbsp;more&nbsp;lines&nbsp;to&nbsp;read,&nbsp;false&nbsp;otherwise</tt></dd></dl>
+ <dl><dt><a name="-netflix_solve"><strong>netflix_solve</strong></a>(r, w)</dt><dd><tt>read,&nbsp;eval,&nbsp;print&nbsp;loop<br>
+r&nbsp;is&nbsp;a&nbsp;reader<br>
+w&nbsp;is&nbsp;a&nbsp;writer</tt></dd></dl>
+</td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#55aa55">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Data</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#55aa55"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><strong>avg_movies</strong> = [3.74954296161, 3.5586206896600001, 3.6411530815100002, 2.7394366197200002, 3.9192982456099998, 3.0843964671199999, 2.1290322580600001, 3.1898054996599998, 2.62105263158, 3.1807228915699999, 3.0303030302999998, 3.4175824175799998, 4.5519999999999996, 3.0254237288099999, 3.28620689655, 3.0985550203800001, 2.90320765335, 3.78436858795, 3.3246753246799998, 3.1465517241400001, ...]<br>
+<strong>avg_user</strong> = [0.0, 0.0, 0.0, 0.0, 0.0, 3.41307814992, 4.0068027210899997, 4.1717171717200001, 0.0, 3.3793103448299999, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, ...]</td></tr></table>
+</body></html>
