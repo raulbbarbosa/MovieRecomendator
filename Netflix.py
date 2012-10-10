@@ -8,10 +8,9 @@
 import math
 import sys
 sys.path.append('./caches')
-from Average import average_cache
+#from Average import average_cache
 from avgUsers import avg_user
-
-
+from avgMovies import avg_movies
 
 
 # ------------
@@ -59,7 +58,7 @@ def netflix_read (r, a, have_buffer) :
 # netflix_eval
 # ------------
 
-def netflix_eval (movie, user) :
+def netflix_eval (movie, user,everyone) :
     """
     
     return the max cycle length in the range [i, j]
@@ -67,29 +66,10 @@ def netflix_eval (movie, user) :
 
     #the result of some calculation.
     #a lot of calculatios    
-
-
-    return avg_user[user-1]
-
-
-# -------------
-# netflix_rmse
-# -------------
-def netflix_rmse(actual, predictions) :
-    """
-    NOTE: actual needs to be build beforehand
-
-    """
-    mean = 0.0    
-
-    for i in range( len(predictions)) :
-    
-        mean += (actual[i] - predictions[i])**2
+    #avg = (avg_user[user-1] + everyone )/2  
+    diff = (avg_user[user-1] - everyone)/4
+    return max(1.0,min(5.0, (avg_user[user-1] + avg_movies[movie-1])/2 + diff))
             
-    mean /= len(predictions)
-
-    return math.sqrt(mean)    
-
 # -------------
 # netflix_print
 # -------------
@@ -117,8 +97,9 @@ def netflix_solve (r, w) :
     w is a writer
     """
 
-    print "RMSE"
-    
+    #print "RMSE"
+    users_that_have_avg_rating_diff_from_zero = [i for i in avg_user if i!=0.0]    
+    everyone = sum(users_that_have_avg_rating_diff_from_zero ,0.0)/len(users_that_have_avg_rating_diff_from_zero)
     next_movie = [0]
     while True : #return False when we reach eof
         a = [0, []]
@@ -128,7 +109,7 @@ def netflix_solve (r, w) :
         ratings = [0.0]*len(users_list)       
         c = 0
         for user in users_list :
-            ratings[c] += netflix_eval(movie,user)
+            ratings[c] += netflix_eval(movie,user,everyone)
             c+=1
         netflix_print(w, movie, ratings)
         
