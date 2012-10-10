@@ -9,17 +9,17 @@ Last Name: Cardenas
 EID: ruc63
 E-mail: rucardenas@utexas.edu
 Estimated number of hours: 10
-Actual number of hours:
+Actual number of hours: 12
 
 Partner First Name: Raul	
 Partner Last Name: Bezerra Barbosa
 Partner EID: rb35468
 Partner E-mail: raulbbarbosa@gmail.com
 Partner Estimated number of hours: 16 hours
-Partner Actual number of hours: 
+Partner Actual number of hours: 12  
 
-Turnin CS Username: 
-GitHub ID:
+Turnin CS Username: rulises
+GitHub ID: rulises
 GitHub Repository Name: cs373-netflix
 
 Comments:
