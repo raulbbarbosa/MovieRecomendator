@@ -1,0 +1,77 @@
+commit 4e99e82b9ff6efadd77c52dd0a477db72aa3a286
+Author: Raul Cardenas <cs.utexas.edu>
+Date:   Wed Oct 10 15:34:31 2012 -0500
+
+    Adding Readme final details closes#1 closes #2 closes#3 closes#4 closes#5 closes#6
+
+commit 537a82735c3ac6e9affe055469a744a2e42e05f0
+Author: Raul Cardenas <cs.utexas.edu>
+Date:   Wed Oct 10 15:23:14 2012 -0500
+
+    Generating pydoc, finalizing unit tests closes #9 closes #11
+
+commit 4ef9b309e3e6dba78036f54e6a5dfac660af3556
+Author: Raul Cardenas <cs.utexas.edu>
+Date:   Tue Oct 9 23:06:48 2012 -0500
+
+    RMSE calculated 0.992414831277
+
+commit 994e2ee0c1097d47f7dc499e904761803168e01a
+Author: Raul Cardenas <cs.utexas.edu>
+Date:   Tue Oct 9 11:46:01 2012 -0500
+
+    estimating rating just avg
+
+commit d7842161d4b3ef6f9bbaa976a0f304d8596ef777
+Author: Raul Cardenas <cs.utexas.edu>
+Date:   Tue Oct 9 11:32:42 2012 -0500
+
+    estimating rating just avg
+
+commit 459b7baedeba5f64522a645da3ce3ba93771207a
+Author: Raul Cardenas <cs.utexas.edu>
+Date:   Tue Oct 9 11:27:56 2012 -0500
+
+    Fix Format bug closes #21
+
+commit c20d3eb1aa24648078d0ace296eb833d6c02c34b
+Author: Raul Cardenas <cs.utexas.edu>
+Date:   Mon Oct 8 16:00:45 2012 -0500
+
+    update users cache and adding movie's years closes #18
+
+commit b05a69ed4e3dd6df7d030cfa51cb3c5bd3fb8a74
+Author: Raul Cardenas <cs.utexas.edu>
+Date:   Mon Oct 8 15:49:18 2012 -0500
+
+    user average cache  closes #16
+
+commit 0855fc48a699e8aace264b00e0f8b8421b8d81f1
+Author: Raul Cardenas <cs.utexas.edu>
+Date:   Mon Oct 8 15:16:46 2012 -0500
+
+    Movies Avergage Cache
+
+commit 3d3704406d28e6994cb246f533d3d988eb1c49b9
+Author: Raul Cardenas <cs.utexas.edu>
+Date:   Mon Oct 8 14:18:28 2012 -0500
+
+    Movies Avergage Cache closes #15
+
+commit 3970c97a3a0090542c17f2246ea9100e32fc214d
+Author: Raul Bezerra Barbosa <cs.utexas.edu>
+Date:   Fri Oct 5 16:31:52 2012 -0500
+
+    Read Training Data, now we can build caches closes #14
+
+commit 38cb919bf82a2da1e63a2e5fe5467fb1953f8d90
+Author: Raul Bezerra Barbosa <cs.utexas.edu>
+Date:   Fri Oct 5 15:55:59 2012 -0500
+
+    New Unit Test, netflix_print, netflix_rmse, stub net_flix_eval
+
+commit b8b5f637a6113c575b1abc795c55ef9df344e76b
+Author: Raul Cardenas <cs.utexas.edu>
+Date:   Fri Oct 5 12:00:50 2012 -0500
+
+    First Commir, out of time, read function implemented with its tests closes #10
